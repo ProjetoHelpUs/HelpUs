@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\peped\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\peped\\.nuget\\packages"
-    ]
-  }
-}

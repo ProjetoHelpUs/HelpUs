@@ -44,7 +44,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 - [ ] Atualizar perfil
 - [ ] Editar postagens
 
-#Como testar a API
+# Como testar a API
 
 - Tenha o Sql server instalado
 - Execute as Migrations na seguinte ordem

@@ -48,7 +48,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 - Tenha o Sql server instalado
 - Caso não tenha o entity framework:
-	dotnet tool install --global dotnet-ef --version 3.0.0
+- dotnet tool install --global dotnet-ef --version 3.0.0
 - Execute as Migrations na seguinte ordem:
 - dotnet ef database update --project HelpUs.Core/HelpUs.Core.csproj
 - Executar o projeto

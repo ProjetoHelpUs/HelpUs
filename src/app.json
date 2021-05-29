@@ -1,0 +1,12 @@
+{
+  "name": "ReactLogin",
+  "displayName": "ReactLogin",
+  "expo": {
+    "name": "ReactLogin",
+    "slug": "ReactLogin",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

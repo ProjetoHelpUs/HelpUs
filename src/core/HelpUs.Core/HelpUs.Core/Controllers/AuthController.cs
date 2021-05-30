@@ -17,6 +17,7 @@ namespace HelpUs.Core.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly AppJwtSettings _appJwtSettings;
+        private JsonResult jsonResult;
 
         public AuthController(SignInManager<IdentityUser> signInManager,
               UserManager<IdentityUser> userManager,
@@ -44,7 +45,7 @@ namespace HelpUs.Core.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(GetFullJwt(registerUser.Email));
+                return Ok(Json(GetFullJwt(registerUser.Email)));
             }
 
             return BadRequest(result.Errors);
@@ -60,7 +61,7 @@ namespace HelpUs.Core.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(GetFullJwt(loginUser.Email));
+                return Ok(Json(GetFullJwt(loginUser.Email)));
             }
 
             if (result.IsLockedOut)

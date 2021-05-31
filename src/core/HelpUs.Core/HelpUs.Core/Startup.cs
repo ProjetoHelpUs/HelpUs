@@ -39,10 +39,6 @@ namespace HelpUs.Core
             services.AddJwtConfiguration(Configuration, "AppSettings");
             services.AddIdentityConfiguration();
 
-            services.AddControllers()
-            .AddJsonOptions(options =>
-               options.JsonSerializerOptions.PropertyNamingPolicy = null);
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HelpUs.Core", Version = "v1" });

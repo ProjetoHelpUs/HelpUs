@@ -1,8 +1,36 @@
 import React from 'react';
+import { useState } from 'react';
 //importação de funções
-import { Text, Image, TextInput, StyleSheet, View, TouchableOpacity, KeyboardAvoidingView, Linking } from 'react-native';
+import { Text, Image, TextInput, StyleSheet, View, TouchableOpacity, KeyboardAvoidingView, Linking, Alert} from 'react-native';
+
+
 
 export default function Login({ navigation }) {
+  const [email, setEmail] = useState('')
+  const [emailError, setemailError] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordError, setpasswordError] = useState('')
+  const [message, setMessage] = useState('')
+
+
+
+  const handleSignIn = async() =>{
+    await fetch("https://localhost:44344/logar", {
+      method:'POST',
+      headers:{'Accept': 'application/json',
+               'Content-type':'application/json'},
+              body: JSON.stringify({
+                'email': email,
+                'password': password
+              })
+            })
+      .then( res => res.json())
+      .then(resData => {
+        alert(resData.message)
+        })
+
+      }
+  
  
   return (
     //formulário de login
@@ -18,19 +46,24 @@ export default function Login({ navigation }) {
           placeholder="Digite seu e-mail"
           keyboardType={'email-address'}
           id='email'
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          onChange={() => setemailError('')}
           />
         </View>
         <View style={styles.inputbox}>
           <TextInput style={styles.txtinput}
           secureTextEntry={true}
           placeholder="Digite sua senha"
-          id='password'
+          value={password}
+          onChangeText={(password) => setPassword(password)}
+          onChange={() => setpasswordError('')}
           />
         </View>
 
         <TouchableOpacity
           style={styles.btnLogin}
-          onPress={ () => {this.clicou()} }
+          onPress={ () => {handleSignIn()} }
         >
           <Text style={styles.txtLogin}>Login</Text>
 
@@ -50,7 +83,7 @@ export default function Login({ navigation }) {
       
       
   );
-};
+  }
 
 const styles = StyleSheet.create({
   screen: {

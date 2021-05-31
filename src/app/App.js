@@ -25,6 +25,7 @@ export default function App() {
             component={Cadastro} 
             options={{title: "HelpUs - Cadastre-se"}}
           />
+
         </Stack.Navigator>
       </NavigationContainer>
 )};

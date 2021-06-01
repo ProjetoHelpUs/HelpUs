@@ -81,7 +81,7 @@ namespace HelpUs.Core.Controllers
                 .WithEmail(email)
                 .BuildToken();
 
-            /*
+            /* 
              * Mais opções
              return new JwtBuilder()
                 .WithUserManager(_userManager)

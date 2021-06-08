@@ -70,25 +70,25 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
 <sub><a href="https://github.com/Arthur-Alv"><b>Arthur Alves</b></a></sub> </td>
  
   <td align="center">
- <sub><b>Felipe Aquino</b></sub> </td>
+ <sub><a href="https://github.com/fernandes35felipe"><b>Felipe Fernandes</b></a></sub> </td>
         
   <td align="center"> 
-<sub><b>Maria Fernanda Dinelli</b></sub> </td>
+<sub><a href="https://github.com/DinelliFernanda"><b>Maria Fernanda Dinelli</b></a></sub> </td>
 
       
   <td align="center">
- <sub><b>Pedro Ramos</b></sub> </td>
+ <sub><a href="https://github.com/PedroHRamos"><b>Pedro Ramos</b></a></sub> </td>
 
  
  <td align="center"> 
-<sub><b>Petrônio Oliveira</b></sub> </td>
+<sub><a href="https://github.com/petroniosantos"><b>Petrônio Oliveira</b></a></sub> </td>
  
   <td align="center">
-  <sub><b>Stella Assunção</b></sub> </td>
+  <sub><a href="https://github.com/stellanicoli"><b>Stella Assunção</b></a></sub> </td>
  
  
  <td align="center">
- <sub><b>Waldeir Franklin</b></sub> </td>
+ <sub><a href="https://github.com/wasouzaf"><b>Waldeir Franklin</b></a></sub> </td>
  </tr>
 
 

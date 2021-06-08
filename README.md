@@ -53,8 +53,6 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
  
 # Tecnologias Utilizadas
 
-<h4 align="center"> 🚧 Work in progress . . . 🚧 </h4> 
-
 - .NET Framework
 - React Native
 

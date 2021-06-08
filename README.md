@@ -61,8 +61,6 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
 
 # Autores
 
-<h4 align="center"> 🚧 Work in progress . . . 🚧 </h4> 
-
 <table>
     <tbody>
       <tr>
@@ -78,11 +76,11 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
 
       
   <td align="center">
- <br> <sub><b>Pedro Ramos</b></sub> </td>
+ <sub><b>Pedro Ramos</b></sub> </td>
 
  
  <td align="center"> 
- <br> <sub><b>Petrônio Oliveira</b></sub> </td>
+<sub><b>Petrônio Oliveira</b></sub> </td>
  
   <td align="center">
   <sub><b>Stella Assunção</b></sub> </td>

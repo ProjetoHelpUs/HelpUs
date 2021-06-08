@@ -89,7 +89,6 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
  </tr>
  
    <td align="center">
- <img src="https://avatars.githubusercontent.com/u/84332572?v=4" width="100px;" alt="" style="max-width:100%;">
  <br> <sub><b>Waldeir Franklin</b></sub> </td>
  </tr>
 

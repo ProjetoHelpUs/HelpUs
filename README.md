@@ -67,7 +67,7 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
       <tr>
  
   <td align="center"> 
-<sub><b>Arthur Alves</b></sub> </td>
+<sub><a href="https://github.com/Arthur-Alv"><b>Arthur Alves</b></a></sub> </td>
  
   <td align="center">
  <sub><b>Felipe Aquino</b></sub> </td>

@@ -63,6 +63,39 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
 
 <h4 align="center"> 🚧 Work in progress . . . 🚧 </h4> 
 
+<table>
+    <tbody>
+      <tr>
+ 
+  <td align="center"> 
+ <br> <sub><b>Arthur Alves</b></sub> </td>
+ 
+  <td align="center">
+ <br> <sub><b>Felipe Aquino</b></sub> </td>
+ </tr>
+      
+      <td align="center"> 
+ <br> <sub><b>Maria Fernanda Dinelli</b></sub> </td>
+ 
+  <td align="center">
+ <br> <sub><b>Pedro Ramos</b></sub> </td>
+ </tr>
+ 
+ <td align="center"> 
+ <br> <sub><b>Petrônio Oliveira</b></sub> </td>
+ 
+  <td align="center">
+  <sub><b>Stella Assunção</b></sub> </td>
+ </tr>
+ 
+   <td align="center">
+ <img src="https://avatars.githubusercontent.com/u/84332572?v=4" width="100px;" alt="" style="max-width:100%;">
+ <br> <sub><b>Waldeir Franklin</b></sub> </td>
+ </tr>
+
+
+ </tbody></table>
+
 # Licença
 
 Este projeto está licenciado sob a Licença MIT, consulte o arquivo LICENSE.md para mais detalhes.

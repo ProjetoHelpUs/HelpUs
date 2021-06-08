@@ -73,7 +73,7 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
  <sub><a href="https://github.com/fernandes35felipe"><b>Felipe Fernandes</b></a></sub> </td>
         
   <td align="center"> 
-<sub><a href="https://github.com/DinelliFernanda"><b>Maria Fernanda Dinelli</b></a></sub> </td>
+<sub><a href="https://github.com/DinelliFernanda"><b>Maria Fernanda</b></a></sub> </td>
 
       
   <td align="center">

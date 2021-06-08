@@ -28,6 +28,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
    * [Sumário](#sumário)
    * [Requisitos Funcionais](#requisitos-funcionais)
    * [Tecnologias Utilizadas](#tecnologias-utilizadas)
+   * [Como testar a API](#como-testar-a-api)
    * [Contribuição](#contribuição)
    * [Autores](#autores)
    * [Licença](#licença)

@@ -72,21 +72,21 @@ Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de cond
  
   <td align="center">
  <br> <sub><b>Felipe Aquino</b></sub> </td>
+        
+  <td align="center"> 
+ <br> <sub><b>Maria Fernanda Dinelli</b></sub> </td>
  </tr>
       
-      <td align="center"> 
- <br> <sub><b>Maria Fernanda Dinelli</b></sub> </td>
- 
   <td align="center">
  <br> <sub><b>Pedro Ramos</b></sub> </td>
- </tr>
+
  
  <td align="center"> 
  <br> <sub><b>Petrônio Oliveira</b></sub> </td>
  
   <td align="center">
   <sub><b>Stella Assunção</b></sub> </td>
- </tr>
+ 
  
    <td align="center">
  <br> <sub><b>Waldeir Franklin</b></sub> </td>

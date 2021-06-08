@@ -55,6 +55,9 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 <h4 align="center"> 🚧 Work in progress . . . 🚧 </h4> 
 
+- .NET Framework
+- React Native
+
 # Contribuição
 
 Leia o arquivo CONTRIBUTING.md para saber detalhes sobre o nosso código de conduta e o processo de envio de solicitações pull (Pull Request) para nós.

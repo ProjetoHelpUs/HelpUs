@@ -15,14 +15,14 @@ export default function Home({ navigation }) {
             <TouchableOpacity
                 style={css.btnDoador}
                 onPress={() => navigation.navigate('Doador')} >
-                <Text style={css.txtButton}>Donatário</Text>
+                <Text style={css.txtButton}>Doador</Text>
 
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={css.btnDonatario}
                 onPress={() => navigation.navigate('Donatario')} >
-                <Text style={css.txtButton}>Doador</Text>
+                <Text style={css.txtButton}>Donatário</Text>
 
             </TouchableOpacity>
 

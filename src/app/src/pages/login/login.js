@@ -39,7 +39,6 @@ export default function Login({ navigation }) {
     //formulário de login
     <KeyboardAvoidingView style={css.screen}>
 
-      <Text style={css.txtBemVindo}>Bem Vindo!</Text>
 
       <Image style={css.logo} source={require('../../assets/helpUs.png')} />
 

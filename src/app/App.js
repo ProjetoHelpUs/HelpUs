@@ -36,12 +36,12 @@ export default function App() {
 
         <Stack.Screen name="Doador"
           component={Doador}
-          options={{ title: "HelpUs - Donatário" }}
+          options={{ title: "HelpUs - Doador" }}
         />
 
         <Stack.Screen name="Donatario"
           component={Donatario}
-          options={{ title: "HelpUs - Doador" }}
+          options={{ title: "HelpUs - Donatário" }}
         />
 
       </Stack.Navigator>

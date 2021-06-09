@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const css = StyleSheet.create({
     screen: {
-        backgroundColor: '#98fb98',
+        backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
     },
@@ -15,7 +15,7 @@ const css = StyleSheet.create({
     },
    
     termoUso: {
-        color: 'blue',
+        color: '#333',
         marginTop: 26,
         textAlign: 'center',
         fontSize: 12,
@@ -24,22 +24,22 @@ const css = StyleSheet.create({
     txtAjudar: {
         marginTop: 55,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
 
     texto: {
         marginTop: 75,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
     txtCopy: {
         marginTop: 13,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
 
     link: {
-        color: 'blue',
+        color: '#333',
         fontWeight: 'bold',
         marginTop: 20,
         textAlign: 'center',

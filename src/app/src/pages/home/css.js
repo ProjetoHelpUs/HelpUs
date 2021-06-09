@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const css = StyleSheet.create({
     screen: {
-        backgroundColor: '#98fb98',
+        backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
     },
@@ -17,7 +17,7 @@ const css = StyleSheet.create({
     btnDoador: {
         width: 300,
         height: 42,
-        backgroundColor: '#3498dc',
+        backgroundColor: '#086b90',
         marginTop: 70,
         borderRadius: 25,
         alignItems: 'center',
@@ -33,7 +33,7 @@ const css = StyleSheet.create({
     btnDonatario: {
         width: 300,
         height: 42,
-        backgroundColor: '#3498dc',
+        backgroundColor: '#086b90',
         marginTop: 25,
         borderRadius: 25,
         alignItems: 'center',
@@ -51,22 +51,22 @@ const css = StyleSheet.create({
     txtAjudar: {
         marginTop: 55,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
 
     texto: {
         marginTop: 75,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
     txtCopy: {
         marginTop: 13,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
 
     link: {
-        color: 'blue',
+        color: '#333',
         fontWeight: 'bold',
         marginTop: 20,
         textAlign: 'center',

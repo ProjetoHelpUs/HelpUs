@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const css = StyleSheet.create({
     screen: {
-        backgroundColor: '#98fb98',
+        backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
     },
@@ -15,7 +15,7 @@ const css = StyleSheet.create({
     },
 
     termoUso: {
-        color: 'blue',
+        color: '#333',
         marginTop: 26,
         textAlign: 'center',
         fontSize: 12,
@@ -24,7 +24,7 @@ const css = StyleSheet.create({
     txtAjudar: {
         marginTop: 10,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
         fontSize: 22,
     },
 
@@ -36,7 +36,7 @@ const css = StyleSheet.create({
     },
 
     texto1: {
-        color: 'blue',
+        color: '#333',
         marginLeft: 20,
     },
 
@@ -48,7 +48,7 @@ const css = StyleSheet.create({
     },
 
     texto2: {
-        color: 'blue',
+        color: '#333',
         marginLeft: 20,
     },
 
@@ -60,7 +60,7 @@ const css = StyleSheet.create({
     },
 
     texto3: {
-        color: 'blue',
+        color: '#333',
         marginLeft: 225,
     },
 
@@ -72,12 +72,12 @@ const css = StyleSheet.create({
     },
 
     texto4: {
-        color: 'blue',
+        color: '#333',
         marginLeft: 225,
     },
 
     txtPessoa: {
-        color: 'blue',
+        color: '#333',
         textAlign: 'center',
         fontSize: 13,
     },
@@ -85,16 +85,16 @@ const css = StyleSheet.create({
     texto: {
         marginTop: 22,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
     txtCopy: {
         marginTop: 13,
         textAlign: 'center',
-        color: 'blue',
+        color: '#333',
     },
 
     link: {
-        color: 'blue',
+        color: '#333',
         fontWeight: 'bold',
         marginTop: 20,
         textAlign: 'center',

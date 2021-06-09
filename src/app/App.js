@@ -10,6 +10,7 @@ import Login from './src/pages/login/login'
 import Home from './src/pages/home/home';
 import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
+import { View, Text, Button, Image } from 'react-native';
 
 //inicia o método de criação de Stack para navegação entre telas
 const Stack = createStackNavigator();
@@ -31,7 +32,15 @@ export default function App() {
 
         <Stack.Screen name="Home"
           component={Home}
-          options={{ title: "HelpUs - Home Page" }}
+          options={{           
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is a button!')}
+              title="Logout"
+              color="#333"
+            />
+          ),
+        }}
         />
 
         <Stack.Screen name="Doador"

@@ -16,7 +16,8 @@ export default function Login({ navigation }) {
 
 
   const handleSignIn = async () => {
-    await fetch("https://localhost:44344/logar", {
+
+    await fetch("https://92f0c3503ec0.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -28,11 +29,17 @@ export default function Login({ navigation }) {
       })
     })
       .then(res => res.json())
-      .then(resData => {
-        alert(resData.message)
+      .then(resData => {  
+        if(resData.statusCode === null){
+          navigation.navigate('Home')
+        }
+        else{
+          alert("Email ou senha incorretos")
+        }
       })
-
   }
+
+
 
 
   return (
@@ -72,7 +79,6 @@ export default function Login({ navigation }) {
       </TouchableOpacity>
 
       <TouchableOpacity
-
         style={css.btnCadastro}
         onPress={() => navigation.navigate('Cadastro')} >
         <Text style={css.txtLogin}>Cadatre-se</Text>

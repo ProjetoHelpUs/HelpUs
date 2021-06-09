@@ -6,6 +6,41 @@ import { css } from './css';
 
 
 export default function Cadastro({ navigation }) {
+  const [email, setEmail] = useState('')
+  const [emailError, setemailError] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordError, setpasswordError] = useState('')
+  const [message, setMessage] = useState('')
+
+
+  const handleSignUp = async () => {
+    if(!email || !password){
+      alert("Preencha todos os campos")
+    }
+  else{
+    await fetch("https://92f0c3503ec0.ngrok.io/cadastrar", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        'email': email,
+        'password': password,
+        'confirmPassword': confirmPassword,
+      })
+    })
+      .then(res => res.json())
+      .then(resData => {  
+        if(resData.statusCode === null){
+          navigation.navigate('Login')
+        }
+        else{
+          alert("Não foi possível efetuar o seu cadastro")
+        }
+      })
+    }
+  }
 
   return (
     //formulário ed cadastro
@@ -25,6 +60,9 @@ export default function Cadastro({ navigation }) {
         <TextInput style={css.txtinput}
           placeholder="E-mail"
           id="email"
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          onChange={() => setpasswordError('')}
         />
       </View>
 
@@ -33,6 +71,9 @@ export default function Cadastro({ navigation }) {
           secureTextEntry={true}
           placeholder="Senha"
           id="password"
+          value={password}
+          onChangeText={(password) => setPassword(password)}
+          onChange={() => setpasswordError('')}
         />
       </View>
 
@@ -46,7 +87,7 @@ export default function Cadastro({ navigation }) {
 
       <TouchableOpacity
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Home')} >
+        onPress={() => { handleSignUp() }} >
         <Text style={css.txtButton}>Cadastrar</Text>
       </TouchableOpacity>
 

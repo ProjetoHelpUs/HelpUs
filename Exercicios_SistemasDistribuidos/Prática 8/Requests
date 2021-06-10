@@ -1,0 +1,56 @@
+Request:
+
+curl --location --request POST 'https://jsonplaceholder.typicode.com/posts' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+ "title": "Cumprimento",
+ "body": "Olá, Mundo",
+ "userId": 99999
+}'
+
+Response:
+
+{
+    "id": 101
+}
+
+Request:
+
+curl --location --request POST 'https://jsonplaceholder.typicode.com/posts' \
+--header 'Cliente: Ana' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "title": "Cumprimento",
+ "body": "Olá, Mundo",
+ "userId": 99999
+}
+'
+
+Response:
+
+{
+    "title": "Cumprimento",
+    "body": "Olá, Mundo",
+    "userId": 99999,
+    "id": 101
+}
+
+Request:
+
+curl --location --request PUT 'https://jsonplaceholder.typicode.com/posts/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "id": 1,
+ "title": "Cumprimento",
+ "body": "Olá, Mundo",
+ "userId": "99999"
+}'
+
+Response:
+
+{
+    "id": 1,
+    "title": "Cumprimento",
+    "body": "Olá, Mundo",
+    "userId": "99999"
+}

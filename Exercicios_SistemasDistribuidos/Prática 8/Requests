@@ -14,26 +14,6 @@ Response:
     "id": 101
 }
 
-Request:
-
-curl --location --request POST 'https://jsonplaceholder.typicode.com/posts' \
---header 'Cliente: Ana' \
---header 'Content-Type: application/json' \
---data-raw '{
- "title": "Cumprimento",
- "body": "Olá, Mundo",
- "userId": 99999
-}
-'
-
-Response:
-
-{
-    "title": "Cumprimento",
-    "body": "Olá, Mundo",
-    "userId": 99999,
-    "id": 101
-}
 
 Request:
 

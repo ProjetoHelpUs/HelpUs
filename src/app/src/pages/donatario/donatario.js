@@ -45,6 +45,11 @@ export default function Donatario(navigate) {
                     />
                 </View>
                 <View style={css.inputBox}>
+                    <TextInput style={css.telefone}
+                        placeholder="Telefone"
+                    />
+                </View>
+                <View style={css.inputBox}>
                     <TextInput style={css.historia}
                         placeholder=" Conte sua história"
                     />

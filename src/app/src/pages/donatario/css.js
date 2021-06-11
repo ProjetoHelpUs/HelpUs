@@ -66,6 +66,17 @@ const css = StyleSheet.create({
         padding: 6,
         color: '#333',
     },
+    telefone: {
+        marginTop: 15,
+        borderRadius: 8,
+        width: 375,
+        marginLeft: 10,
+        borderColor: '#ccc',
+        borderWidth: 2,
+        padding: 6,
+        color: '#333',
+    },
+    
     historia: {
         marginTop: 15,
         borderRadius: 8,

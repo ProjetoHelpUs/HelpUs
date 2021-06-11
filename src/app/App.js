@@ -45,7 +45,6 @@ export default function App({ navigation }) {
                 onPress={() => Logout()}
                 title="Logout"
                 color="#086b90"
-
               />
             ),
           }}

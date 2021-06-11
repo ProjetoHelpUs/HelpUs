@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking } from 'react-native';
 
 
-export default function Logout({ navigation }){
+export default function Logout({ navigation }) {
     navigation.navigate('Login')
     alert('você saiu')
 }

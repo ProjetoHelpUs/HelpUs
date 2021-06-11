@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactLogin",
-    "slug": "ReactLogin",
+    "name": "HelpUs",
+    "slug": "HelpUs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "src/assets/img/icon.png",

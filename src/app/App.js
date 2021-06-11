@@ -18,10 +18,10 @@ import Logout from './src/functions/Login';
 const Stack = createStackNavigator();
 
 export default function App({ navigation }) {
-   const Logout = async () => {
+  const Logout = async () => {
     await navigation.navigate('Login')
     alert('você saiu')
-}
+  }
 
   return (
     //Cria os as rotas entre telas com nomes e títulos
@@ -39,15 +39,16 @@ export default function App({ navigation }) {
 
         <Stack.Screen name="Home"
           component={Home}
-          options={{           
-          headerRight: () => (
-            <Button
-              onPress={() => Logout()}
-              title="Logout"
-              color="#333"
-            />
-          ),
-        }}
+          options={{
+            headerRight: () => (
+              <Button
+                onPress={() => Logout()}
+                title="Logout"
+                color="#086b90"
+
+              />
+            ),
+          }}
         />
 
         <Stack.Screen name="Doador"

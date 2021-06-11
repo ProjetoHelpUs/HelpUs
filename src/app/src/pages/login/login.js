@@ -28,7 +28,7 @@ export default function Login({ navigation }) {
       .then(res => res.json())
       .then(resData => {  
         if(resData.statusCode === null){
-          navigation.navigate('Home')
+          navigation.navigate('Doador')
         }
         else{
           alert("Email ou senha incorretos")
@@ -73,7 +73,7 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Cadastro')} >
+        onPress={() => navigation.navigate('Home')} >
         <Text style={css.txtLogin}>Cadatre-se</Text>
       </TouchableOpacity>
 

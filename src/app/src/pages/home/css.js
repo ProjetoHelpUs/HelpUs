@@ -6,6 +6,9 @@ const css = StyleSheet.create({
         flex: 1,
         alignContent: 'center',
     },
+    scrollview: {
+        backgroundColor: '#fcfcfc',
+      },
     logo: {
         width: 350,
         left: 25,

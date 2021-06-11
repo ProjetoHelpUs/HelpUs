@@ -101,4 +101,4 @@ Este projeto está licenciado sob a Licença MIT, consulte o arquivo LICENSE.md 
 
 # Agradecimentos
 
-<h4 align="center"> 🚧 Work in progress . . . 🚧 </h4> 
+<h4 align="center"> Nós, da equipe HelpUs, prestamos nossos agradecimentos aos professores e orientadores do projeto Montanha, Diego, Wesley e Israel. </h4> 

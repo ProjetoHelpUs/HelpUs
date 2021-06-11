@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 //importação de funções
-import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking, Alert } from 'react-native';
+import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking } from 'react-native';
 import { css } from './css';
 
 
@@ -16,7 +16,8 @@ export default function Login({ navigation }) {
 
 
   const handleSignIn = async () => {
-    await fetch("https://localhost:44344/logar", {
+
+    await fetch("https://92f0c3503ec0.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -28,18 +29,23 @@ export default function Login({ navigation }) {
       })
     })
       .then(res => res.json())
-      .then(resData => {
-        alert(resData.message)
+      .then(resData => {  
+        if(resData.statusCode === null){
+          navigation.navigate('Home')
+        }
+        else{
+          alert("Email ou senha incorretos")
+        }
       })
-
   }
+
+
 
 
   return (
     //formulário de login
     <KeyboardAvoidingView style={css.screen}>
-      
-      <Text style={css.txtBemVindo}>Bem Vindo!</Text>
+
 
       <Image style={css.logo} source={require('../../assets/helpUs.png')} />
 
@@ -67,21 +73,19 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnLogin}
-        onPress={() => { handleSignIn() }}
-      >
+        onPress={() => { handleSignIn() }} >
         <Text style={css.txtLogin}>Login</Text>
 
       </TouchableOpacity>
 
       <TouchableOpacity
-
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Cadastro')}    >
+        onPress={() => navigation.navigate('Cadastro')} >
         <Text style={css.txtLogin}>Cadatre-se</Text>
       </TouchableOpacity>
 
       <Text style={css.termoUso}>Ao criar uma conta, você concorda com nosso
-        <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
+      <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
       <Text style={css.txtTexto}>Copyright HelpUs 2021 ©</Text>
     </KeyboardAvoidingView>
   );

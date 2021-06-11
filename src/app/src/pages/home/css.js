@@ -8,32 +8,29 @@ const css = StyleSheet.create({
     },
     logo: {
         width: 350,
+        left: 25,
+        right: -70,
         height: 160,
-        marginTop: 32,
-        marginBottom: 64,
-        marginLeft: 32,
-        marginRight: 32,
+        marginTop: 30,
     },
-    inputbox: {
-        backgroundColor: '#fff',
-        color: "blue",
-        marginTop: 25,
-        borderRadius: 8,
+   
+    btnDoador: {
         width: 300,
+        height: 42,
+        backgroundColor: '#086b90',
+        marginTop: 70,
+        borderRadius: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
         marginLeft: 50,
-        borderColor: '#ccc',
-        borderWidth: 2,
-        padding:6,
     },
 
-
-    txtinput: {
-        fontSize: 15,
-        marginLeft: 20,
+    txtButton: {
+        fontSize: 16,
+        color: '#fff'
     },
 
-
-    btnLogin: {
+    btnDonatario: {
         width: 300,
         height: 42,
         backgroundColor: '#086b90',
@@ -42,48 +39,32 @@ const css = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 50,
-    },
-
-    btnCadastro: {
-        width: 300,
-        height: 42,
-        backgroundColor: '#086b90',
-        marginTop: 25,
-        borderRadius: 25,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 50,
-    },
-
-    txtLogin: {
-        fontSize: 16,
-        color: '#fff'
-    },
-
-    txtCadastro: {
-        fontSize: 16,
-        color: '#fff'
     },
 
     termoUso: {
-        color: '#333',
+        color: 'blue',
         marginTop: 26,
         textAlign: 'center',
         fontSize: 12,
     },
 
-    txtBemVindo: {
-        color: '#333',
-        fontSize: 25,
+    txtAjudar: {
+        marginTop: 55,
         textAlign: 'center',
-        marginTop: 35,
+        color: '#333',
     },
 
-    txtTexto: {
+    texto: {
+        marginTop: 75,
+        textAlign: 'center',
+        color: '#333',
+    },
+    txtCopy: {
         marginTop: 13,
         textAlign: 'center',
         color: '#333',
     },
+
     link: {
         color: '#333',
         fontWeight: 'bold',

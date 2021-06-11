@@ -12,10 +12,17 @@ import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
 import { View, Text, Button, Image } from 'react-native';
 
+import Logout from './src/functions/Login';
+
 //inicia o método de criação de Stack para navegação entre telas
 const Stack = createStackNavigator();
 
-export default function App() {
+export default function App({ navigation }) {
+   const Logout = async () => {
+    await navigation.navigate('Login')
+    alert('você saiu')
+}
+
   return (
     //Cria os as rotas entre telas com nomes e títulos
     <NavigationContainer>
@@ -35,7 +42,7 @@ export default function App() {
           options={{           
           headerRight: () => (
             <Button
-              onPress={() => alert('This is a button!')}
+              onPress={() => Logout()}
               title="Logout"
               color="#333"
             />

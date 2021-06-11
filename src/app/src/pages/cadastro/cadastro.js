@@ -10,6 +10,7 @@ export default function Cadastro({ navigation }) {
   const [emailError, setemailError] = useState('')
   const [password, setPassword] = useState('')
   const [passwordError, setpasswordError] = useState('')
+  const [confirmPassword, setPasswordConf] = useState('')
   const [message, setMessage] = useState('')
 
 
@@ -18,7 +19,7 @@ export default function Cadastro({ navigation }) {
       alert("Preencha todos os campos")
     }
   else{
-    await fetch("https://92f0c3503ec0.ngrok.io/cadastrar", {
+    await fetch("http://d5b66deeeb81.ngrok.io/cadastrar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -33,6 +34,7 @@ export default function Cadastro({ navigation }) {
       .then(res => res.json())
       .then(resData => {  
         if(resData.statusCode === null){
+          alert("Cadastro realizado com sucesso")
           navigation.navigate('Login')
         }
         else{
@@ -82,6 +84,9 @@ export default function Cadastro({ navigation }) {
           secureTextEntry={true}
           placeholder="Confirmação de senha"
           id="passwordconf"
+          value={confirmPassword}
+          onChangeText={(confirmPassword) => setPasswordConf(confirmPassword)}
+          onChange={() => setpasswordError('')}
         />
       </View>
 

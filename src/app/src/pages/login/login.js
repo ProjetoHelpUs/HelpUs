@@ -5,7 +5,6 @@ import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, L
 import { css } from './css';
 
 
-
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('')
   const [emailError, setemailError] = useState('')
@@ -14,10 +13,8 @@ export default function Login({ navigation }) {
   const [message, setMessage] = useState('')
 
 
-
   const handleSignIn = async () => {
-
-    await fetch("https://92f0c3503ec0.ngrok.io/logar", {
+    await fetch("http://d5b66deeeb81.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -38,10 +35,6 @@ export default function Login({ navigation }) {
         }
       })
   }
-
-
-
-
   return (
     //formulário de login
     <KeyboardAvoidingView style={css.screen}>

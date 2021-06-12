@@ -3,6 +3,7 @@ import React from 'react';
 //importação de funções
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import { View, Text, Button, Image } from 'react-native';
 
 //importação de telas
 import Cadastro from './src/pages/cadastro/cadastro'
@@ -10,7 +11,7 @@ import Login from './src/pages/login/login'
 import Home from './src/pages/home/home';
 import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
-import { View, Text, Button, Image } from 'react-native';
+import PromotionList from './src/pages/dashboard/lista';
 
 import Logout from './src/functions/Login';
 
@@ -59,6 +60,12 @@ export default function App({ navigation }) {
           component={Donatario}
           options={{ title: "HelpUs - Donatário" }}
         />
+
+        <Stack.Screen name="Dashboard"
+          component={PromotionList}
+          options={{ title: "HelpUs - Dashboard" }}
+        />
+
 
       </Stack.Navigator>
     </NavigationContainer>

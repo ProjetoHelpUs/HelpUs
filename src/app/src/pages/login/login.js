@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 //importação de funções
-import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking } from 'react-native';
+import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking, ScrollView } from 'react-native';
 import { css } from './css';
 
 
@@ -28,7 +28,7 @@ export default function Login({ navigation }) {
       .then(res => res.json())
       .then(resData => {  
         if(resData.statusCode === null){
-          navigation.navigate('Doador')
+          navigation.navigate('Dashboard')
         }
         else{
           alert("Email ou senha incorretos")
@@ -37,6 +37,7 @@ export default function Login({ navigation }) {
   }
   return (
     //formulário de login
+    <ScrollView style={css.scrollview}>
     <KeyboardAvoidingView style={css.screen}>
 
 
@@ -77,9 +78,10 @@ export default function Login({ navigation }) {
         <Text style={css.txtLogin}>Cadatre-se</Text>
       </TouchableOpacity>
 
-      <Text style={css.termoUso}>Ao criar uma conta, você concorda com nosso
+      <Text style={css.termoUso}>Ao criar uma conta, você concorda com nossos 
       <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
       <Text style={css.txtTexto}>Copyright HelpUs 2021 ©</Text>
     </KeyboardAvoidingView>
+    </ScrollView>
   );
 };

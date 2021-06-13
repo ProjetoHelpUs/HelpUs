@@ -7,7 +7,7 @@ import { css } from './css';
 export default function Donatario(navigate) {
     return (
         //Tela Doador
-        <ScrollView>
+        <ScrollView style={css.scrollview}>
             <KeyboardAvoidingView
                 style={css.screen}>
                 <Image style={css.logo} source={require('../../assets/helpUs.png')} />

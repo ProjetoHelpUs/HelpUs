@@ -11,7 +11,7 @@ import Login from './src/pages/login/login'
 import Home from './src/pages/home/home';
 import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
-import PromotionList from './src/pages/dashboard/lista';
+import List from './src/pages/dashboard/lista';
 
 import Logout from './src/functions/Login';
 
@@ -40,15 +40,7 @@ export default function App({ navigation }) {
 
         <Stack.Screen name="Home"
           component={Home}
-          options={{
-            headerRight: () => (
-              <Button
-                onPress={() => Logout()}
-                title="Logout"
-                color="#086b90"
-              />
-            ),
-          }}
+          options={{ title: "HelpUs - Cadastro"}}
         />
 
         <Stack.Screen name="Doador"
@@ -62,7 +54,7 @@ export default function App({ navigation }) {
         />
 
         <Stack.Screen name="Dashboard"
-          component={PromotionList}
+          component={List}
           options={{ title: "HelpUs - Dashboard" }}
         />
 

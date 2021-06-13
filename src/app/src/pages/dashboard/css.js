@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
+  scrollview: {
+    backgroundColor: '#fcfcfc',
+  },
   centeredView: {
     flex: 1,
     alignItems: "center",
@@ -24,7 +27,7 @@ export default StyleSheet.create({
     width: '94%',
     minHeight: 200
   },
-  promotionImage: {
+  image: {
     width: '50%'
   },
   descriptionText: {
@@ -42,11 +45,18 @@ export default StyleSheet.create({
     fontSize: 16,
     margin: 5
   },
-  linkButton: {
+  btnPerfil: {
     backgroundColor: "#2196F3",
     borderRadius: 15,
-    padding: 10,
-    elevation: 2,
+    padding: 5,
+    elevation: 1,
+    margin: 5,
+    alignItems: 'center',
+    justifyContent: 'center',  
+  },
+  btnText: {
+    color: "#fcfcfc",
+    fontWeight: "bold",
     margin: 5
   },
   textLinkButton: {

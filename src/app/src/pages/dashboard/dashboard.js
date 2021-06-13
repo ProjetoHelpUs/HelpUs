@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableHighlight, Image, Linking } from 'react-native'
-import Styles from './styles'
+import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
+import Styles from './css'
 
-class PromotionCard extends Component {
+class Card extends Component {
   constructor(props) {
     super(props)
   }
@@ -11,10 +11,13 @@ class PromotionCard extends Component {
     return(
       <View style={ Styles.centeredView }>
         <View style={ Styles.cardView }>
-          <Image style={ Styles.promotionImage } source={ {uri: this.props.data.picture.medium} }  />
+          <Image style={ Styles.image } source={ {uri: this.props.data.picture.medium} }  />
           <View style={ Styles.descriptionText }>
             <Text style={ Styles.titleText }>{this.props.data.name.first}</Text>
             <Text style={ Styles.priceText }>{this.props.data.gender}</Text>
+              <TouchableOpacity style={Styles.btnPerfil}>
+                <Text style={ Styles.btnText }>Ver perfil</Text>
+              </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -22,4 +25,4 @@ class PromotionCard extends Component {
   }
 }
 
-export default PromotionCard
+export default Card

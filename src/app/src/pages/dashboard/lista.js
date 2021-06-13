@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { View, Text, FlatList } from "react-native";
-import Styles from './styles'
-import PromotionCard from './dashboard'
+import Styles from './css'
+import Card from './dashboard'
 
-class PromotionsList extends Component {
+class List extends Component {
       constructor(props) {
         super(props);
     
@@ -47,7 +47,7 @@ class PromotionsList extends Component {
         style={ Styles.promotionsList }
         data={ this.state.data }
         renderItem={ ({ item }) => (
-          <PromotionCard data={ item } />
+          <Card data={ item } />
         )}
         keyExtractor={ item => item.email } 
       />
@@ -55,6 +55,6 @@ class PromotionsList extends Component {
   }
 }
 
-export default PromotionsList
+export default List
 
 

@@ -2,9 +2,12 @@ import { StyleSheet } from "react-native";
 
 const css = StyleSheet.create({
   screen: {
-    backgroundColor: '#98fb98',
+    backgroundColor: '#fcfcfc',
     flex: 1,
     alignContent: 'center',
+  },
+  scrollview: {
+    backgroundColor: '#fcfcfc',
   },
   logo: {
     width: 350,
@@ -17,9 +20,12 @@ const css = StyleSheet.create({
     backgroundColor: '#fff',
     color: "blue",
     marginTop: 25,
-    borderRadius: 25,
+    borderRadius: 8,
     width: 300,
     marginLeft: 50,
+    borderColor: '#ccc',
+    borderWidth: 2,
+    padding:6,
   },
 
   txtinput: {
@@ -30,7 +36,7 @@ const css = StyleSheet.create({
   btnCadastro: {
     width: 300,
     height: 42,
-    backgroundColor: '#3498dc',
+    backgroundColor: '#086b90',
     marginTop: 25,
     borderRadius: 25,
     alignItems: 'center',
@@ -44,14 +50,14 @@ const css = StyleSheet.create({
   },
 
   texto: {
-    color: 'blue',
+    color: '#333',
     marginTop: 20,
     textAlign: 'center',
     fontSize: 12,
 
   },
   link: {
-    color: 'blue',
+    color: '#333',
     fontWeight: 'bold',
     marginTop: 20,
     textAlign: 'center',

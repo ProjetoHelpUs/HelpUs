@@ -1,22 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 //importação de funções
-import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking, Alert } from 'react-native';
+import { Text, Image, TextInput, View, TouchableOpacity, KeyboardAvoidingView, Linking, ScrollView } from 'react-native';
 import { css } from './css';
 
 
-
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('petronio@gmail.com')
   const [emailError, setemailError] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('Senha@123')
   const [passwordError, setpasswordError] = useState('')
   const [message, setMessage] = useState('')
 
 
-
   const handleSignIn = async () => {
-    await fetch("https://localhost:44344/logar", {
+    await fetch("https://5c3861bd6b95.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -28,18 +26,20 @@ export default function Login({ navigation }) {
       })
     })
       .then(res => res.json())
-      .then(resData => {
-        alert(resData.message)
+      .then(resData => {  
+        if(resData.statusCode === null){
+          navigation.navigate('Dashboard')
+        }
+        else{
+          alert("Email ou senha incorretos")
+        }
       })
-
   }
-
-
   return (
     //formulário de login
+    <ScrollView style={css.scrollview}>
     <KeyboardAvoidingView style={css.screen}>
-      
-      <Text style={css.txtBemVindo}>Bem Vindo!</Text>
+
 
       <Image style={css.logo} source={require('../../assets/helpUs.png')} />
 
@@ -67,22 +67,21 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnLogin}
-        onPress={() => { handleSignIn() }}
-      >
+        onPress={() => { handleSignIn() }} >
         <Text style={css.txtLogin}>Login</Text>
 
       </TouchableOpacity>
 
       <TouchableOpacity
-
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Cadastro')}    >
+        onPress={() => navigation.navigate('Home')} >
         <Text style={css.txtLogin}>Cadatre-se</Text>
       </TouchableOpacity>
 
-      <Text style={css.termoUso}>Ao criar uma conta, você concorda com nosso
-        <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
+      <Text style={css.termoUso}>Ao criar uma conta, você concorda com nossos 
+      <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
       <Text style={css.txtTexto}>Copyright HelpUs 2021 ©</Text>
     </KeyboardAvoidingView>
+    </ScrollView>
   );
 };

@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "ReactLogin",
-    "slug": "ReactLogin",
+    "name": "HelpUs",
+    "slug": "HelpUs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "src/assets/img/icon.png",
     "splash": {
       "image": "src/assets/img/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FCFCFC"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

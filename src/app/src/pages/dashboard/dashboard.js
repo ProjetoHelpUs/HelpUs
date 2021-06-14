@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
 import Styles from './css'
+import { navigation } from 'react-native';
 
 class Card extends Component {
   constructor(props) {
@@ -17,9 +18,9 @@ class Card extends Component {
               <Text style={Styles.priceText}>{this.props.data.gender}</Text>
 
               <TouchableOpacity
-                style={css.btnPerfil}
+                style={Styles.btnPerfil}
                 onPress={() => navigation.navigate('Perfil')} >
-                <Text style={css.txtLogin}>Cadatre-se</Text>
+                <Text style={Styles.txtLogin}>Ver perfil</Text>
               </TouchableOpacity>
             </View>
           </View>

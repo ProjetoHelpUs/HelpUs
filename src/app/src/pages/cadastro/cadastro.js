@@ -20,7 +20,7 @@ export default function Cadastro({ navigation }) {
       alert("Preencha todos os campos")
     }
     else {
-      await fetch("https://41f13bf45840.ngrok.io/cadastrar", {
+      await fetch("https://5c3861bd6b95.ngrok.io/cadastrar", {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

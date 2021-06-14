@@ -54,8 +54,8 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',  
   },
-  btnText: {
-    color: "#fcfcfc",
+  txtLogin: {
+    color: "#fff",
     fontWeight: "bold",
     margin: 5
   },

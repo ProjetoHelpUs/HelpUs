@@ -6,15 +6,15 @@ import { css } from './css';
 
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('petronio@gmail.com')
   const [emailError, setemailError] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('Senha@123')
   const [passwordError, setpasswordError] = useState('')
   const [message, setMessage] = useState('')
 
 
   const handleSignIn = async () => {
-    await fetch("https://41f13bf45840.ngrok.io/logar", {
+    await fetch("https://5c3861bd6b95.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

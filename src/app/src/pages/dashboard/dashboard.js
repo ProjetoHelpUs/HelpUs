@@ -9,7 +9,6 @@ class Card extends Component {
 
   render() {
     return (
-      <ScrollView>
         <View style={Styles.centeredView}>
           <View style={Styles.cardView}>
             <Image style={Styles.image} source={{ uri: this.props.data.picture.medium }} />
@@ -25,7 +24,6 @@ class Card extends Component {
             </View>
           </View>
         </View >
-      </ScrollView>
     )
   }
 }

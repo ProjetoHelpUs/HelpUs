@@ -14,7 +14,7 @@ export default function Login({ navigation }) {
 
 
   const handleSignIn = async () => {
-    await fetch("https://d6ff14972b58.ngrok.io/logar", {
+    await fetch("https://41f13bf45840.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

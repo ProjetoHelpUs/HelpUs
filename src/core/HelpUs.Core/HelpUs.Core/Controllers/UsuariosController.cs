@@ -32,7 +32,7 @@ namespace HelpUs.Core.Controllers
         }
 
         // GET: api/Usuarios
-        [HttpGet("/api/Usuarios/donatario")]
+        [HttpGet("/api/Usuarios/Donatarios")]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetDonatarios()
         {
             //sendo 1 donatário e 2 doador
@@ -43,7 +43,7 @@ namespace HelpUs.Core.Controllers
                 return BadRequest(Json("Ainda não existem usuários cadastrados."));
             }
 
-            return Ok(Json(usuarios.ToString()));
+            return Ok(Json(usuarios));
         } 
 
         // GET: api/Usuarios/5

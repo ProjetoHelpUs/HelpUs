@@ -46,7 +46,7 @@ export default StyleSheet.create({
     margin: 5
   },
   btnPerfil: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "#086b90",
     borderRadius: 15,
     padding: 5,
     elevation: 1,

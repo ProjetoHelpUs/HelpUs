@@ -4,7 +4,7 @@ import { Text, Image, Linking, KeyboardAvoidingView, TextInput, View, ScrollView
 import { css } from './css';
 
 
-export default function Donatario(navigate) {
+export default function Donatario(navigation) {
     return (
         //Tela Doador
         <ScrollView style={css.scrollview}>
@@ -83,7 +83,7 @@ export default function Donatario(navigate) {
 
                 <TouchableOpacity
                     style={css.btnCadastro}
-                    onPress={() => navigation.navigate('Doador')} >
+                    onPress={() => navigation.navigate('Perfil')} >
                     <Text style={css.txtButton}>Cadastrar</Text>
                 </TouchableOpacity>
 

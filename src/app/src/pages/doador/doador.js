@@ -29,7 +29,7 @@ export default function Doador() {
 
 
                 <Text style={css.texto}>Ao criar uma conta, você concorda com nossos
-            <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
+                    <Text style={css.link} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
                 <Text style={css.txtCopy}>Copyright HelpUs 2021 ©</Text>
 
             </KeyboardAvoidingView>

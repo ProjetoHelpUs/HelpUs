@@ -14,6 +14,7 @@ import Donatario from './src/pages/donatario/donatario';
 import List from './src/pages/dashboard/lista';
 
 import Logout from './src/functions/Login';
+import Perfil from './src/pages/perfil/perfil';
 
 //inicia o método de criação de Stack para navegação entre telas
 const Stack = createStackNavigator();
@@ -40,7 +41,7 @@ export default function App({ navigation }) {
 
         <Stack.Screen name="Home"
           component={Home}
-          options={{ title: "HelpUs - Cadastro"}}
+          options={{ title: "HelpUs - Cadastro" }}
         />
 
         <Stack.Screen name="Doador"
@@ -56,6 +57,11 @@ export default function App({ navigation }) {
         <Stack.Screen name="Dashboard"
           component={List}
           options={{ title: "HelpUs - Dashboard" }}
+        />
+
+        <Stack.Screen name="Perfil"
+          component={Perfil}
+          options={{ title: "HelpUs - Perfil" }}
         />
 
 

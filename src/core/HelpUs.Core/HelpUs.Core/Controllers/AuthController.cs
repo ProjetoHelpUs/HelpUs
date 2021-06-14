@@ -92,13 +92,13 @@ namespace HelpUs.Core.Controllers
         //Um token
         private string GetFullJwt(string email)
         {
-            /*return new JwtBuilder()
+            return new JwtBuilder()
                 .WithUserManager(_userManager)
                 .WithJwtSettings(_appJwtSettings)
                 .WithEmail(email)
-                .BuildToken();*/
+                .BuildToken();
 
-            return email;
+            //return email;
 
             /* 
              * Mais opções
@@ -142,6 +142,7 @@ namespace HelpUs.Core.Controllers
             usuario.DataNascimento = usuarioDTO.DataNascimento;
             usuario.Descricao = usuarioDTO.Descricao;
             usuario.LinkImagem = usuarioDTO.LinkImagem;
+            usuario.Nome = usuarioDTO.Nome;
 
             return usuario;
         }

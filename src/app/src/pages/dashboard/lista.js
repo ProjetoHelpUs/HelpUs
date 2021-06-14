@@ -23,21 +23,24 @@ class List extends Component {
 
   makeRemoteRequest = () => {
     const { page, seed } = this.state;
-    const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`;
+    const url = `https://e76950562601.ngrok.io/api/Usuarios/Donatarios`;
     this.setState({ loading: true });
     fetch(url)
       .then(res => res.json())
       .then(res => {
         this.setState({
-          data: page === 1 ? res.results : [...this.state.data, ...res.results],
+          data: res.value,
           error: res.error || null,
           loading: false,
           refreshing: false
         });
       })
       .catch(error => {
+        
         this.setState({ error, loading: false });
+        
       });
+      
   };
 
 

@@ -12,18 +12,13 @@ import Home from './src/pages/home/home';
 import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
 import List from './src/pages/dashboard/lista';
-
-import Logout from './src/functions/Login';
+import Card from './src/pages/dashboard/dashboard';
 import Perfil from './src/pages/perfil/perfil';
 
 //inicia o método de criação de Stack para navegação entre telas
 const Stack = createStackNavigator();
 
 export default function App({ navigation }) {
-  const Logout = async () => {
-    await navigation.navigate('Login')
-    alert('você saiu')
-  }
 
   return (
     //Cria os as rotas entre telas com nomes e títulos
@@ -58,6 +53,12 @@ export default function App({ navigation }) {
           component={List}
           options={{ title: "HelpUs - Dashboard" }}
         />
+        <Stack.Screen name="Dashboard2"
+          component={Card}
+          options={{ title: "HelpUs - Dashboard" }}
+        />
+
+        
 
         <Stack.Screen name="Perfil"
           component={Perfil}

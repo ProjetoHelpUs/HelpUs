@@ -6,15 +6,15 @@ import { css } from './css';
 
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState('petronio@gmail.com')
+  const [email, setEmail] = useState('felipe@gmail.com')
   const [emailError, setemailError] = useState('')
-  const [password, setPassword] = useState('Senha@123')
+  const [password, setPassword] = useState('Felipe@123')
   const [passwordError, setpasswordError] = useState('')
   const [message, setMessage] = useState('')
 
 
   const handleSignIn = async () => {
-    await fetch("https://5c3861bd6b95.ngrok.io/logar", {
+    await fetch("https://e76950562601.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -74,8 +74,8 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Home')} >
-        <Text style={css.txtLogin}>Cadatre-se</Text>
+        onPress={() => navigation.navigate('Dashboard')} >
+        <Text style={css.txtLogin}>Cadastre-se</Text>
       </TouchableOpacity>
 
       <Text style={css.termoUso}>Ao criar uma conta, você concorda com nossos 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Button, Linking } from 'react-native'
 import Styles from './css'
-import { navigation } from 'react-native';
 
-class Card extends Component {
+
+class Card extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -12,16 +12,15 @@ class Card extends Component {
     return (
         <View style={Styles.centeredView}>
           <View style={Styles.cardView}>
-            <Image style={Styles.image} source={{ uri: this.props.data.picture.medium }} />
+            <Image style={Styles.image} source={{ uri: this.props.data.linkImagem }} />
             <View style={Styles.descriptionText}>
-              <Text style={Styles.titleText}>{this.props.data.name.first}</Text>
-              <Text style={Styles.priceText}>{this.props.data.gender}</Text>
+              <Text style={Styles.titleText}>{this.props.data.email}</Text>
+              <Text style={Styles.priceText}>{this.props.data.banco}</Text>
 
-              <TouchableOpacity
-                style={Styles.btnPerfil}
+              <Button
+                title="Ver perfil"
                 onPress={() => navigation.navigate('Perfil')} >
-                <Text style={Styles.txtLogin}>Ver perfil</Text>
-              </TouchableOpacity>
+              </Button>
             </View>
           </View>
         </View >

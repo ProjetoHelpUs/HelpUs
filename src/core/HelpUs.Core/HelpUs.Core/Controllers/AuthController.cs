@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using HelpUs.Core.Data;
 using HelpUs.Core.DTO;
 using HelpUs.Core.Models;
 using Microsoft.AspNetCore.Identity;
@@ -35,27 +36,35 @@ namespace HelpUs.Core.Controllers
         }
 
         [HttpPost("cadastrar")]
-        public async Task<ActionResult> Register([FromBody] UsuarioDTO registerUser)
+        public async Task<ActionResult> Register([FromBody] UsuarioDTO usuarioDTO)
         {
-            if (!ModelState.IsValid) return BadRequest(Json(ModelState));
-
-            var user = new IdentityUser
+            try
             {
-                UserName = registerUser.Email,
-                Email = registerUser.Email,
-                EmailConfirmed = true
 
-            };
+                if (!ModelState.IsValid) return BadRequest(Json(ModelState));
 
-            var result = await _userManager.CreateAsync(user, registerUser.Password);
+                var user = new IdentityUser
+                {
+                    UserName = usuarioDTO.Email,
+                    Email = usuarioDTO.Email,
+                    EmailConfirmed = true
 
-            if (result.Succeeded)
+                };
+
+                var result = await _userManager.CreateAsync(user, usuarioDTO.Password);
+
+                if (result.Succeeded)
+                {
+                    Usuario usuario = MapUser(usuarioDTO);
+                    await CreateUsuarioAsync(usuario);
+                    return Ok(Json(GetFullJwt(usuarioDTO.Email)));
+                }
+
+                return BadRequest(Json(result.Errors));
+            }catch(Exception ex)
             {
-                Usuario usuario = MapUser(registerUser);
-                return await CreateUsuarioAsync(usuario);
+                return BadRequest(Json(ex.Message));
             }
-
-            return BadRequest(Json(result.Errors));
 
         }
 
@@ -135,7 +144,7 @@ namespace HelpUs.Core.Controllers
             return usuario;
         }
 
-        public async Task<ActionResult> CreateUsuarioAsync(Usuario usuario)
+        public async Task<HttpResponseMessage> CreateUsuarioAsync(Usuario usuario)
         {
             var usuarioJson = new StringContent(
                 JsonSerializer.Serialize(usuario),
@@ -145,7 +154,7 @@ namespace HelpUs.Core.Controllers
             using var httpResponse =
                 await _httpClient.PostAsync("https://localhost:44344/api/Usuarios", usuarioJson);
 
-            return Ok(Json(GetFullJwt(usuario.Email)));
+            return httpResponse.EnsureSuccessStatusCode();
         }
 
     }

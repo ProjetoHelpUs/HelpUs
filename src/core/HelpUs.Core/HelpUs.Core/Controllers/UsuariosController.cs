@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HelpUs.Core.Data;
 using HelpUs.Core.Models;
+using System.Data.SqlClient;
+using System.Data;
+using Dapper;
 
 namespace HelpUs.Core.Controllers
 {
@@ -91,12 +94,33 @@ namespace HelpUs.Core.Controllers
         // POST: api/Usuarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
+        public async Task<ActionResult> PostUsuario(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
+            try
+            {
+                var db = new SqlConnection("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = helpusdb; Integrated Security = True");
+                
+                string query = $"SELECT Id FROM AspNetUsers Where Email = '{usuario.Email}';";
 
-            return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
+
+                if(db.State == ConnectionState.Closed)
+                {
+                    db.Open();
+                }
+                var result = db.Query<AspNetUserBrabo>(query).ToArray();
+                AspNetUserBrabo aspnetUser = result[0];
+                usuario.Id_Auth = aspnetUser.Id;
+                db.Close();
+                _context.Usuarios.Add(usuario);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
+                
+                
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // DELETE: api/Usuarios/5
@@ -119,5 +143,10 @@ namespace HelpUs.Core.Controllers
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
+    }
+
+    internal class AspNetUserBrabo
+    {
+        public string Id { get; set; }
     }
 }

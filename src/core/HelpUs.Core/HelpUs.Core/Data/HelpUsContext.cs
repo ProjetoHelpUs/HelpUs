@@ -4,12 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using HelpUs.Core.Models;
 using Microsoft.EntityFrameworkCore;
+using NetDevPack.Identity.User;
 
 namespace HelpUs.Core.Data
 {
     public class HelpusContext: DbContext
     {
         public DbSet<Usuario> Usuarios { get; set; }
+
+        ///public DbSet<AspNetUser> AspNetUsers { get; set; }
 
         public HelpusContext(DbContextOptions<HelpusContext> options) : base(options)
         {

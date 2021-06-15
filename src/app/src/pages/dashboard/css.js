@@ -54,7 +54,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',  
   },
-  txtLogin: {
+  txtPerfil: {
     color: "#fff",
     fontWeight: "bold",
     margin: 5

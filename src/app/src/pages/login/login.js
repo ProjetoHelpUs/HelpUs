@@ -74,7 +74,7 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Home')} >
+        onPress={() => navigation.navigate('Perfil')} >
         <Text style={css.txtLogin}>Cadatre-se</Text>
       </TouchableOpacity>
 

@@ -13,7 +13,6 @@ import Doador from './src/pages/doador/doador';
 import Donatario from './src/pages/donatario/donatario';
 import List from './src/pages/dashboard/lista';
 
-import Logout from './src/functions/Login';
 import Perfil from './src/pages/perfil/perfil';
 
 //inicia o método de criação de Stack para navegação entre telas

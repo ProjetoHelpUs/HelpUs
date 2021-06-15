@@ -11,12 +11,47 @@ const css = StyleSheet.create({
         alignContent: 'center',
     },
     logo: {
-        width: 350,
-        height: 160,
+        width: 150,
+        height: 60,
         marginTop: 32,
         marginBottom: 64,
         marginLeft: 32,
         marginRight: 32,
+    },
+    texto: {
+        marginTop: 75,
+        textAlign: 'center',
+        color: '#333',
+    },
+    perfil1: {
+        width: 150,
+        height: 100,
+        marginTop: -35,
+        marginLeft: 15,
+    },
+    txtPerfil: {
+        marginTop: -100,
+        marginLeft: 180,
+    },
+    txtCopy: {
+        marginTop: 13,
+        textAlign: 'center',
+        color: '#333',
+    },
+
+    termoUso: {
+        color: '#333',
+        fontWeight: 'bold',
+        marginTop: 20,
+        textAlign: 'center',
+        fontSize: 12,
+    },
+    txtHistoria: {
+        color: '#333',
+        marginTop: 30,
+        marginLeft: 15,
+        marginRight: 15,
+        textAlign: 'justify',
     },
 });
 

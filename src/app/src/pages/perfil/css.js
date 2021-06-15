@@ -4,11 +4,13 @@ import { StyleSheet } from 'react-native'
 const css = StyleSheet.create({
     scrollview: {
         backgroundColor: '#fcfcfc',
+        
       },
     screen: {
         backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
+        
     },
     logo: {
         width: 150,
@@ -32,12 +34,17 @@ const css = StyleSheet.create({
     txtPerfil: {
         marginTop: -100,
         marginLeft: 180,
+        fontWeight: 'bold'
+    },
+    txtVar: {
+        marginTop: -100,
+        marginLeft: 180,
     },
     txtCopy: {
         marginBottom: 0,
         textAlign: 'center',
         color: '#333',
-        position
+        padding: 40
     },
 
     termoUso: {

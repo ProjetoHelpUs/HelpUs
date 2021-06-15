@@ -10,7 +10,7 @@ export default function Perfil({ route, navigation }) {
     const { userNome, userFone, userEmail, userEndereco, userBanco, userConta,userAgencia, 
         userPix, userDatanasc, userHistoria, userFoto } = route.params;      
     
-
+        
     return (
         //Tela Home
         <ScrollView style={css.scrollview}>
@@ -18,12 +18,13 @@ export default function Perfil({ route, navigation }) {
 
             <Image style={css.logo} source={require('../../assets/helpUs.png')} />
             <Image style={css.perfil1} source={{ uri: userFoto }} />
-            <Text style={css.txtPerfil}> {userNome} {"\n"} {userDatanasc} {"\n"} Contato: {userFone} {"\n"} {userEndereco} {"\n"} Belo Horizonte - MG</Text>
+            <Text style={css.txtPerfil}>Nome: {userNome} {"\n"}Contato: {userFone} {"\n"}Endereço: {userEndereco} {"\n"}Banco: {userBanco} {"\n"}
+            Agencia: {userAgencia} Conta: {userConta} {"\n"}Pix: {userPix}
+            </Text>
             <Text style={css.txtHistoria}>
                 {userHistoria}
             </Text>
-            <Text style={css.texto}>Ao criar uma conta, você concorda com nossos
-                <Text style={css.termoUso} onPress={() => Linking.openURL('http://google.com')}>Termos de uso!</Text></Text>
+            
             <Text style={css.txtCopy}>Copyright HelpUs 2021 ©</Text>
 
         </KeyboardAvoidingView>

@@ -24,7 +24,7 @@ class List extends Component {
 
   makeRemoteRequest = () => {
     const { page, seed } = this.state;
-    const url = `https://1de6092cd694.ngrok.io/api/Usuarios/Donatarios`;
+    const url = `https://2cae89c5771f.ngrok.io/api/Usuarios/Donatarios`;
     this.setState({ loading: true });
     fetch(url)
       .then(res => res.json())
@@ -49,7 +49,9 @@ class List extends Component {
           style={Styles.promotionsList}
           data={this.state.data}
           renderItem={({ item }) => (
-            <Card data={item} />
+            <Card data={item}
+            navigation={this.props.navigation}
+            />
           )}
           keyExtractor={item => item.email}
         />

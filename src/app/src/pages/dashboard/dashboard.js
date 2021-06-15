@@ -8,6 +8,20 @@ class Card extends React.Component {
     super(props)
   }
 
+  handleProfile = () => {
+    var userData = ''
+    fetch(`https://2cae89c5771f.ngrok.io/api/Busca/Usuarios/${this.props.data.email}`)
+     .then(res => res.json())
+     .then(resData => {  
+       userData = resData
+      
+        this.props.navigation.navigate('Perfil', {userNome: userData.value.nome, userFone: userData.value.telefone, userEmail: userData.value.email,
+          userEndereco: userData.value.endereco, userBanco: userData.value.banco, userConta: userData.value.contaBancaria,
+          userAgencia: userData.value.agenciaBancaria, userPix: userData.value.pix, userDatanasc: userData.value.dataNascimento, 
+          userHistoria: userData.value.descricao, userFoto: userData.value.linkImagem})
+     })
+ }
+
   render() {
     return (
         <View style={Styles.centeredView}>
@@ -18,7 +32,7 @@ class Card extends React.Component {
               <Text style={Styles.priceText}>{this.props.data.endereco}</Text>
               <Button
                 title="Ver perfil"
-                onPress={() => navigation.navigate('Perfil')} >
+                onPress={() => this.handleProfile()} >
               </Button>
             </View>
           </View>

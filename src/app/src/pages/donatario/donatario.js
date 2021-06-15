@@ -33,7 +33,7 @@ export default function Donatario({ navigation }) {
         alert("Preencha os campos obrigatórios")
       }
       else {
-        await fetch("https://1de6092cd694.ngrok.io/cadastrar", {
+        await fetch("http://2cae89c5771f.ngrok.io/cadastrar", {
           method: 'POST',
           headers: {
             'Accept': 'application/json',

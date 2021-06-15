@@ -7,7 +7,7 @@ import { css } from './css';
 
 export default function Login({ navigation }) {
 
-  const [email, setEmail] = useState('donatario01@gmail.com')
+  const [email, setEmail] = useState('doador01@gmail.com')
   const [emailError, setemailError] = useState('')
   const [password, setPassword] = useState('Senha@123')
   const [passwordError, setpasswordError] = useState('')
@@ -16,7 +16,7 @@ export default function Login({ navigation }) {
   var userData = ''
 
   const handleTypeUser = async () => {
-    await fetch("https://1de6092cd694.ngrok.io/api/Usuarios")
+    await fetch("https://2cae89c5771f.ngrok.io/api/Usuarios")
       .then(res => res.json())
       .then(resData => {  
         userType = resData.find(usuario => usuario.email === email)
@@ -25,7 +25,7 @@ export default function Login({ navigation }) {
 
   const handleProfile = () => {
 
-    fetch(`https://1de6092cd694.ngrok.io/api/Busca/Usuarios/${email}`)
+    fetch(`https://2cae89c5771f.ngrok.io/api/Busca/Usuarios/${email}`)
      .then(res => res.json())
      .then(resData => {  
        userData = resData
@@ -35,7 +35,7 @@ export default function Login({ navigation }) {
 
 
   const handleSignIn = async () => {
-    await fetch("https://1de6092cd694.ngrok.io/logar", {
+    await fetch("https://2cae89c5771f.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -53,13 +53,12 @@ export default function Login({ navigation }) {
         if(resData.statusCode === null){
           if(userType.tipo == 0){          
             navigation.navigate('Dashboard')
-          }
-          
-          else if(userType.tipo == 1){          
+          }          
+          else if(userType.tipo == 1){      
             navigation.navigate('Perfil', {userNome: userData.value.nome, userFone: userData.value.telefone, userEmail: userData.value.email,
             userEndereco: userData.value.endereco, userBanco: userData.value.banco, userConta: userData.value.contaBancaria,
-          userAgencia: userData.value.agenciaBancaria, userPix: userData.value.pix, userDatanasc: userData.value.dataNascimento, 
-          userHistoria: userData.value.descricao, userFoto: userData.value.linkImagem  })
+            userAgencia: userData.value.agenciaBancaria, userPix: userData.value.pix, userDatanasc: userData.value.dataNascimento, 
+            userHistoria: userData.value.descricao, userFoto: userData.value.linkImagem  })
 
           }
           
@@ -77,7 +76,7 @@ export default function Login({ navigation }) {
 
       <Image style={css.logo} source={require('../../assets/helpUs.png')} />
 
-      <Text style={css.txtTexto}>Login</Text>
+      <Text style={css.txtTexto}>Faça Login usando seu email cadastrado</Text>
 
       <View style={css.inputbox}>
         <TextInput style={css.txtinput}

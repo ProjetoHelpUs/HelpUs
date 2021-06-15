@@ -18,7 +18,7 @@ export default class Card extends Component {
               <Text style={Styles.titleText}>{this.props.data.name.first}</Text>
               <Text style={Styles.priceText}>{this.props.data.gender}</Text>
 
-              <TouchableOpacity style={Styles.btnPerfil} onPress={() => { navigation.navigate('Perfil') }}>
+              <TouchableOpacity style={Styles.btnPerfil} onPress={() => this.props.navigation.navigate('Perfil') }>
                 <Text style={Styles.txtPerfil}>Ver perfil</Text>
               </TouchableOpacity>
 

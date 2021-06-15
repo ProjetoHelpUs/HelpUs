@@ -47,7 +47,9 @@ class List extends Component {
         style={Styles.promotionsList}
         data={this.state.data}
         renderItem={({ item }) => (
-          <Card data={item} />
+          <Card data={item}
+          navigation={this.props.navigation}
+          />
         )}
         keyExtractor={item => item.email}
       />

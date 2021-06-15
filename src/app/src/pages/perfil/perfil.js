@@ -8,7 +8,7 @@ import { css } from './css';
 
 export default function Perfil({ route, navigation }) {
     const { userNome, userFone, userEmail, userEndereco, userBanco, userConta,userAgencia, 
-        userPix, userDatanasc, userHistoria, userFoto } = route.params;      
+        userPix, userHistoria, userFoto } = route.params;      
     
         
     return (

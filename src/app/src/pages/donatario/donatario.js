@@ -29,11 +29,11 @@ export default function Donatario({ navigation }) {
 
 
     const handleSignUp = async () => {
-      if (!email || !password|| !nome || !datNasc || !sexo || !historia) {
+      if (!email || !password|| !nome || !sexo || !historia) {
         alert("Preencha os campos obrigatórios")
       }
       else {
-        await fetch("http://2cae89c5771f.ngrok.io/cadastrar", {
+        await fetch("https://2cae89c5771f.ngrok.io/cadastrar", {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -51,7 +51,6 @@ export default function Donatario({ navigation }) {
             'contaBancaria': contBanc,
             'agenciaBancaria': agBanc,
             'pix': pix,
-            'dataNascimento': datNasc,
             'descricao': historia,
             'linkImagem': linkImagem,
           })
@@ -120,8 +119,6 @@ export default function Donatario({ navigation }) {
                     <TextInput style={css.datNasc}
                         placeholder="Data nascimento"
                         id="datNasc"
-                        value={datNasc}
-                        onChangeText={(datNasc) => setdatNasc(datNasc)}
                     />
                 </View>
 

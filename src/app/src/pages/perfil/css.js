@@ -27,12 +27,12 @@ const css = StyleSheet.create({
     },
     perfil1: {
         width: 150,
-        height: 100,
+        height: 150,
         marginTop: -35,
         marginLeft: 15,
     },
     txtPerfil: {
-        marginTop: -100,
+        marginTop: -145,
         marginLeft: 180,
         fontWeight: 'bold'
     },

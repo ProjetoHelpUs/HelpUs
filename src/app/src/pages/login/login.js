@@ -50,14 +50,14 @@ export default function Login({ navigation }) {
       .then(resData => {  
         handleTypeUser()
         handleProfile()
-        if(resData.statusCode === null){
+        if(resData.value != "E-mail ou Senha incorretos"){
           if(userType.tipo == 0){          
             navigation.navigate('Dashboard')
           }          
           else if(userType.tipo == 1){      
             navigation.navigate('Perfil', {userNome: userData.value.nome, userFone: userData.value.telefone, userEmail: userData.value.email,
             userEndereco: userData.value.endereco, userBanco: userData.value.banco, userConta: userData.value.contaBancaria,
-            userAgencia: userData.value.agenciaBancaria, userPix: userData.value.pix, userDatanasc: userData.value.dataNascimento, 
+            userAgencia: userData.value.agenciaBancaria, userPix: userData.value.pix,  
             userHistoria: userData.value.descricao, userFoto: userData.value.linkImagem  })
 
           }

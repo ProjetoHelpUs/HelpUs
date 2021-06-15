@@ -47,10 +47,10 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 # Como testar a API
 
-- Tenha o Sql server instalado
-- Execute as Migrations na seguinte ordem
-- dotnet ef database update --project HelpUs.Core/HelpUs.Core.csproj
-- Executar o projeto
+- Tenha o Sql Server instalado;
+- Execute as Migrations, na seguinte ordem:
+- dotnet ef database update --project HelpUs.Core/HelpUs.Core.csproj;
+- Executar o projeto.
  
 # Tecnologias Utilizadas
 

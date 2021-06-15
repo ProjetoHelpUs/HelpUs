@@ -1,79 +1,58 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native'
+
 
 const css = StyleSheet.create({
+    scrollview: {
+        backgroundColor: '#fcfcfc',
+      },
     screen: {
         backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
     },
-    scrollview: {
-        backgroundColor: '#fcfcfc',
-      },
     logo: {
-        width: 350,
-        left: 25,
-        right: -70,
-        height: 160,
-        marginTop: 30,
+        width: 150,
+        height: 60,
+        marginTop: 32,
+        marginBottom: 64,
+        marginLeft: 32,
+        marginRight: 32,
     },
-   
-    btnDoador: {
-        width: 300,
-        height: 42,
-        backgroundColor: '#086b90',
-        marginTop: 70,
-        borderRadius: 25,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 50,
-    },
-
-    txtButton: {
-        fontSize: 16,
-        color: '#fff'
-    },
-
-    btnDonatario: {
-        width: 300,
-        height: 42,
-        backgroundColor: '#086b90',
-        marginTop: 25,
-        borderRadius: 25,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 50,
-    },
-
-    termoUso: {
-        color: 'blue',
-        marginTop: 26,
-        textAlign: 'center',
-        fontSize: 12,
-    },
-
-    txtAjudar: {
-        marginTop: 55,
-        textAlign: 'center',
-        color: '#333',
-    },
-
     texto: {
         marginTop: 75,
         textAlign: 'center',
         color: '#333',
     },
+    perfil1: {
+        width: 150,
+        height: 100,
+        marginTop: -35,
+        marginLeft: 15,
+    },
+    txtPerfil: {
+        marginTop: -100,
+        marginLeft: 180,
+    },
     txtCopy: {
-        marginTop: 13,
+        marginBottom: 0,
         textAlign: 'center',
         color: '#333',
+        position
     },
 
-    link: {
+    termoUso: {
         color: '#333',
         fontWeight: 'bold',
         marginTop: 20,
         textAlign: 'center',
         fontSize: 12,
+    },
+    txtHistoria: {
+        color: '#333',
+        marginTop: 30,
+        marginLeft: 15,
+        marginRight: 15,
+        textAlign: 'justify',
     },
 });
 

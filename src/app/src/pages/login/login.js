@@ -7,7 +7,7 @@ import { css } from './css';
 
 export default function Login({ navigation }) {
 
-  const [email, setEmail] = useState('teste01@gmail.com')
+  const [email, setEmail] = useState('donatario01@gmail.com')
   const [emailError, setemailError] = useState('')
   const [password, setPassword] = useState('Senha@123')
   const [passwordError, setpasswordError] = useState('')

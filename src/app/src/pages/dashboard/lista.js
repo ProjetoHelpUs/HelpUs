@@ -37,9 +37,7 @@ class List extends Component {
         });
       })
       .catch(error => {
-        
         this.setState({ error, loading: false });
-        
       });
       
   };

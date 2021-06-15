@@ -60,6 +60,38 @@ namespace HelpUs.Core.Controllers
             return usuario;
         }
 
+        // GET: api/Usuarios/email
+        [HttpGet("/api/Busca/Usuarios/{email}")]
+        public async Task<ActionResult<Usuario>> GetUsuarioPorEmail(string email)
+        {
+            try
+            {
+                var db = new SqlConnection("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = helpusdb; Integrated Security = True");
+
+                string query = $"SELECT * FROM Usuarios Where Email = '{email}';";
+
+
+                if (db.State == ConnectionState.Closed)
+                {
+                    db.Open();
+                }
+                var result = db.Query<Usuario>(query).ToArray();
+                Usuario usuario = result[0];
+                db.Close();
+
+                if (usuario == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(Json(usuario));
+
+            }catch(Exception ex)
+            {
+                return BadRequest(Json(ex.Message));
+            }
+        }
+
         // PUT: api/Usuarios/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

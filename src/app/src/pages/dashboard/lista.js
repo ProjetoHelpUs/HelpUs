@@ -3,6 +3,7 @@ import { FlatList } from "react-native";
 import Styles from './css'
 import Card from './dashboard'
 
+
 class List extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class List extends Component {
 
   makeRemoteRequest = () => {
     const { page, seed } = this.state;
-    const url = `https://e76950562601.ngrok.io/api/Usuarios/Donatarios`;
+    const url = `https://1de6092cd694.ngrok.io/api/Usuarios/Donatarios`;
     this.setState({ loading: true });
     fetch(url)
       .then(res => res.json())
@@ -46,18 +47,16 @@ class List extends Component {
 
   render() {
     return (
-      <FlatList
-        style={Styles.promotionsList}
-        data={this.state.data}
-        renderItem={({ item }) => (
-          <Card data={item} />
-        )}
-        keyExtractor={item => item.email}
-      />
+        <FlatList
+          style={Styles.promotionsList}
+          data={this.state.data}
+          renderItem={({ item }) => (
+            <Card data={item} />
+          )}
+          keyExtractor={item => item.email}
+        />
     )
   }
 }
 
 export default List
-
-

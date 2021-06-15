@@ -7,6 +7,7 @@ import { css } from './css';
 
 
 export default function Cadastro({ navigation }) {
+  const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [emailError, setemailError] = useState('')
   const [password, setPassword] = useState('')
@@ -20,13 +21,14 @@ export default function Cadastro({ navigation }) {
       alert("Preencha todos os campos")
     }
     else {
-      await fetch("https://e76950562601.ngrok.io/cadastrar", {
+      await fetch("https://1de6092cd694.ngrok.io/cadastrar", {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'Content-type': 'application/json'
         },
         body: JSON.stringify({
+          'nome': nome,
           'email': email,
           'password': password,
           'confirmPassword': confirmPassword,
@@ -57,6 +59,8 @@ export default function Cadastro({ navigation }) {
           <TextInput style={css.txtinput}
             placeholder="Nome"
             id="name"
+            value={nome}
+            onChangeText={(nome) => setNome(nome)}
           />
         </View>
 

@@ -6,15 +6,26 @@ import { css } from './css';
 
 
 export default function Login({ navigation }) {
+
   const [email, setEmail] = useState('felipe@gmail.com')
   const [emailError, setemailError] = useState('')
   const [password, setPassword] = useState('Felipe@123')
   const [passwordError, setpasswordError] = useState('')
   const [message, setMessage] = useState('')
+  var userType = ''
+
+  const handleTypeUser = async () => {
+    await fetch("https://1de6092cd694.ngrok.io/api/Usuarios")
+      .then(res => res.json())
+      .then(resData => {  
+        userType = resData.find(usuario => usuario.email === email)
+      })
+  }
+
 
 
   const handleSignIn = async () => {
-    await fetch("https://e76950562601.ngrok.io/logar", {
+    await fetch("https://1de6092cd694.ngrok.io/logar", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -27,19 +38,27 @@ export default function Login({ navigation }) {
     })
       .then(res => res.json())
       .then(resData => {  
+        handleTypeUser()
         if(resData.statusCode === null){
-          navigation.navigate('Dashboard')
+          if(userType.tipo == 0){          
+            navigation.navigate('Dashboard')
+          }
+          
+          if(userType.tipo == 1){          
+            navigation.navigate('Home')
+          }
+          
         }
         else{
           alert("Email ou senha incorretos")
         }
       })
   }
+
   return (
     //formulário de login
     <ScrollView style={css.scrollview}>
     <KeyboardAvoidingView style={css.screen}>
-
 
       <Image style={css.logo} source={require('../../assets/helpUs.png')} />
 
@@ -74,7 +93,7 @@ export default function Login({ navigation }) {
 
       <TouchableOpacity
         style={css.btnCadastro}
-        onPress={() => navigation.navigate('Dashboard')} >
+        onPress={() => navigation.navigate('Home')} >
         <Text style={css.txtLogin}>Cadastre-se</Text>
       </TouchableOpacity>
 

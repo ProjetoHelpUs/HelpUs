@@ -6,12 +6,14 @@ import { css } from './css';
 
 
 export default function Home({ navigation }) {
+    
+
     return (
         //Tela Home
         <ScrollView style={css.scrollview}>
             <KeyboardAvoidingView style={css.screen}>
                 <Image style={css.logo} source={require('../../assets/helpUs.png')} />
-
+                    
                 <Text style={css.txtAjudar}>Como você deseja participar?</Text>
 
                 <TouchableOpacity

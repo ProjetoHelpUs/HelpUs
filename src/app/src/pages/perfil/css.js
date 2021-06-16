@@ -4,20 +4,20 @@ import { StyleSheet } from 'react-native'
 const css = StyleSheet.create({
     scrollview: {
         backgroundColor: '#fcfcfc',
-        
-      },
+
+    },
     screen: {
         backgroundColor: '#fcfcfc',
         flex: 1,
         alignContent: 'center',
-        
+
     },
     logo: {
         width: 150,
         height: 60,
-        marginTop: 32,
+        marginTop: 50,
         marginBottom: 64,
-        marginLeft: 32,
+        marginLeft: 120,
         marginRight: 32,
     },
     texto: {
@@ -32,7 +32,7 @@ const css = StyleSheet.create({
         marginLeft: 15,
     },
     txtPerfil: {
-        marginTop: -145,
+        marginTop: -130,
         marginLeft: 180,
         fontWeight: 'bold'
     },
@@ -41,7 +41,9 @@ const css = StyleSheet.create({
         marginLeft: 180,
     },
     txtCopy: {
-        marginBottom: 0,
+        flex: 1,
+        justifyContent: 'flex-end',
+        top: 30,
         textAlign: 'center',
         color: '#333',
         padding: 40
@@ -55,8 +57,9 @@ const css = StyleSheet.create({
         fontSize: 12,
     },
     txtHistoria: {
+        height: 150,
         color: '#333',
-        marginTop: 30,
+        marginTop: 50,
         marginLeft: 15,
         marginRight: 15,
         textAlign: 'justify',

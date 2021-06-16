@@ -54,7 +54,9 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
  
 # Tecnologias Utilizadas
 
+- C#
 - .NET Framework
+- JavaScript
 - React Native
 
 # Contribuição

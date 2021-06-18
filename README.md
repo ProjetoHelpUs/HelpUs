@@ -69,7 +69,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 # appsettings.json
 
--Em HelpUsContext está a minha string de conexão com o sql server, substitua de acordo com seu ambiente
+- Em HelpUsContext está a minha string de conexão com o sql server, substitua de acordo com seu ambiente
 
 
 ```

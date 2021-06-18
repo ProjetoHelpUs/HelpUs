@@ -95,6 +95,14 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 }
 ```
  
+ # Executando a aplicação
+
+- tenha o nodejs instalado (https://nodejs.org/en/)
+- localize a pasta "App", onde se encontram os arquivos referentes ao Front End e, utilizando o prompt de comando, execute o comando 'npm install'
+- substitua os links das requisições HTTP pelo link gerado pelo NGROCK nos seguintes arquivos:
+- 	 cadastro/cadastro.js (linha 24); dasboard/dashboard.js (linha 13); dasboard/lista.js (linha 27); donatario/donatario.js (linha 36); login/login.js (linhas 19, 28 e 38); 
+ 
+
 # Tecnologias Utilizadas
 
 - C#

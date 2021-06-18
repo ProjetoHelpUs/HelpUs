@@ -47,6 +47,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 # Como testar a API
 
+- Instale a versão mais recente do Visual Studio 2019 ou superior
 - Tenha o Sql Server instalado;
 - Crie o banco de dados: create database helpusdb;
 - Execute as Migrations, na seguinte ordem:

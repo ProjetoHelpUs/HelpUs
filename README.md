@@ -69,29 +69,30 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 # appsettings.json
 
-	-Em HelpUsContext está a minha string de conexão com o sql server, substitua de acordo com seu ambiente
+-Em HelpUsContext está a minha string de conexão com o sql server, substitua de acordo com seu ambiente
 
-	```
-	{
-		"Logging": {
-			"LogLevel": {
-				"Default": "Information",
-				"Microsoft": "Warning",
-				"Microsoft.Hosting.Lifetime": "Information"
-			}
-		},
-		"AllowedHosts": "*",
-		"ConnectionStrings": {
-			"HelpUsContext": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=helpusdb;Integrated Security=True"
-		},
-		"AppSettings": {
-			"SecretKey": "COLOQUEAQUISUACHAVEDECRIPTOGRAFIAPARAAUTENTICACAO",
-			"Expiration": 2,
-			"Issuer": "SampleApp",
-			"Audience": "https://localhost"
+
+```
+{
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning",
+			"Microsoft.Hosting.Lifetime": "Information"
 		}
+	},
+	"AllowedHosts": "*",
+	"ConnectionStrings": {
+		"HelpUsContext": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=helpusdb;Integrated Security=True"
+	},
+	"AppSettings": {
+		"SecretKey": "COLOQUEAQUISUACHAVEDECRIPTOGRAFIAPARAAUTENTICACAO",
+		"Expiration": 2,
+		"Issuer": "SampleApp",
+		"Audience": "https://localhost"
 	}
-	```
+}
+```
  
 # Tecnologias Utilizadas
 

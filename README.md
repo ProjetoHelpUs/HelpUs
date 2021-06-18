@@ -67,7 +67,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 - Na pasta \HelpUs\src\core\HelpUs.Core\HelpUs.Core adicionar o appssettings.json que deve ser preenchido conforme o tópico abaixo.
 - Executar o projeto.
 
-# appssettings.json
+# appsettings.json
 
 	-Em HelpUsContext está a minha string de conexão com o sql server, substitua de acordo com seu ambiente
 

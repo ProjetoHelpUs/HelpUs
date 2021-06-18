@@ -50,7 +50,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 - Instale a versão mais recente do Visual Studio 2019 ou superior
 - Tenha o Sql Server instalado;
 - Crie o banco de dados: create database helpusdb;
-- Execute as Migrations, na seguinte ordem:
+- Execute as Migrations no console do gerenciador de pacotes Nuget, na seguinte ordem:
 
 ```
 - dotnet ef database update --context NetDevPackAppDbContext --project HelpUs.Core/HelpUs.Core.csproj

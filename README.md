@@ -39,18 +39,36 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 
 - [x] Cadastrar Usuário
 - [x] Fazer Login
-- [ ] Cadastrar postagens
-- [ ] Visualizar postagens
-- [ ] Visualizar perfil
+- [X] Cadastrar postagens
+- [X] Visualizar postagens
+- [X] Visualizar perfil
 - [ ] Atualizar perfil
 - [ ] Editar postagens
 
 # Como testar a API
 
 - Tenha o Sql Server instalado;
+- Crie o banco de dados: create database helpusdb;
 - Execute as Migrations, na seguinte ordem:
-- dotnet ef database update --project HelpUs.Core/HelpUs.Core.csproj;
+
+```
+- dotnet ef database update --context NetDevPackAppDbContext --project HelpUs.Core/HelpUs.Core.csproj
+```
+
+```
+- dotnet ef database update Usuario --project HelpUs.Core/HelpUs.Core.csproj --context HelpUsContext
+```
+
+```
+- dotnet ef database update usuario2 --project HelpUs.Core/HelpUs.Core.csproj --context HelpUsContext
+```
+
+- Na pasta \HelpUs\src\core\HelpUs.Core\HelpUs.Core adicionar o appssettings.json que deve ser preenchido conforme o tópico abaixo.
 - Executar o projeto.
+
+# appssettings.json
+
+	
  
 # Tecnologias Utilizadas
 

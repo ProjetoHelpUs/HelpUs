@@ -50,6 +50,7 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 - Instale a versão mais recente do Visual Studio 2019 ou superior
 - Tenha o Sql Server instalado;
 - Crie o banco de dados: create database helpusdb;
+- Na pasta \HelpUs\src\core\HelpUs.Core\HelpUs.Core adicionar o appssettings.json que deve ser preenchido conforme o tópico abaixo.
 - Execute as Migrations no console do gerenciador de pacotes Nuget, na seguinte ordem:
 
 ```
@@ -64,8 +65,8 @@ cadastrem no aplicativo e os doadores escolham o projeto/pessoa que desejam cola
 - dotnet ef database update usuario2 --project HelpUs.Core/HelpUs.Core.csproj --context HelpUsContext
 ```
 
-- Na pasta \HelpUs\src\core\HelpUs.Core\HelpUs.Core adicionar o appssettings.json que deve ser preenchido conforme o tópico abaixo.
 - Executar o projeto.
+- Caso queira testar a integração do app com a API aqui tem um ótimo tutorial de como configurar o ngrock para não conflitar com o IIS https://www.youtube.com/watch?v=1J-5r5at5fE
 
 # appsettings.json
 
